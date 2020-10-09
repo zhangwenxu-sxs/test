@@ -1,0 +1,1 @@
+cmd_/home/zhangwenxu/work/test/mutex/k.ko := ld -r -m elf_x86_64  -z max-page-size=0x200000  --build-id  -T ./scripts/module-common.lds -o /home/zhangwenxu/work/test/mutex/k.ko /home/zhangwenxu/work/test/mutex/k.o /home/zhangwenxu/work/test/mutex/k.mod.o;  true

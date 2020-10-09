@@ -1,0 +1,3 @@
+/home/zhangwenxu/work/test/VFP/build/android/VFP/CMakeFiles/rebuild_cache.dir
+/home/zhangwenxu/work/test/VFP/build/android/VFP/CMakeFiles/hello.dir
+/home/zhangwenxu/work/test/VFP/build/android/VFP/CMakeFiles/edit_cache.dir

@@ -1,0 +1,3 @@
+/home/zhangwenxu/work/test/CMakeList/build/android/CMakeList/CMakeFiles/rebuild_cache.dir
+/home/zhangwenxu/work/test/CMakeList/build/android/CMakeList/CMakeFiles/hello.dir
+/home/zhangwenxu/work/test/CMakeList/build/android/CMakeList/CMakeFiles/edit_cache.dir
