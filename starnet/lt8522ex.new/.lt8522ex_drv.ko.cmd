@@ -1,0 +1,1 @@
+cmd_drivers/starnet/lt8522ex/lt8522ex_drv.ko := aarch64-himix100-linux-ld -EL -r  -T ./scripts/module-common.lds --build-id  -o drivers/starnet/lt8522ex/lt8522ex_drv.ko drivers/starnet/lt8522ex/lt8522ex_drv.o drivers/starnet/lt8522ex/lt8522ex_drv.mod.o ;  true

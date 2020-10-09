@@ -1,0 +1,11 @@
+kernel/drivers/starnet/sii9022/sii9022drv.ko
+kernel/drivers/starnet/sn_netlink/sn_netlink.ko
+kernel/drivers/starnet/lt6911uxc/lt6911uxc.ko
+kernel/drivers/starnet/ssd1322/ssd1322.ko
+kernel/drivers/starnet/lt8522ex/lt8522ex_drv.ko
+kernel/drivers/starnet/oled/ssd1322-spi/oled_spi.ko
+kernel/drivers/starnet/oled/ssd1322-i2c/oled_i2c.ko
+kernel/drivers/starnet/hdmi_detect/hdmi_detect.ko
+kernel/drivers/starnet/cat9883/cat9883drv.ko
+kernel/drivers/starnet/fpga_monitor/fpga_monitor_drv.ko
+kernel/drivers/starnet/gpio_ctrl_hub/gpio_ctrl_hub.ko

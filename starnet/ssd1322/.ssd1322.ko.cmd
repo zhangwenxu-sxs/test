@@ -1,0 +1,1 @@
+cmd_drivers/starnet/ssd1322/ssd1322.ko := aarch64-himix100-linux-ld -EL -r  -T ./scripts/module-common.lds --build-id  -o drivers/starnet/ssd1322/ssd1322.ko drivers/starnet/ssd1322/ssd1322.o drivers/starnet/ssd1322/ssd1322.mod.o ;  true

@@ -1,0 +1,1 @@
+cmd_drivers/starnet/cat9883/cat9883drv.ko := aarch64-himix100-linux-ld -EL -r  -T ./scripts/module-common.lds --build-id  -o drivers/starnet/cat9883/cat9883drv.ko drivers/starnet/cat9883/cat9883drv.o drivers/starnet/cat9883/cat9883drv.mod.o ;  true

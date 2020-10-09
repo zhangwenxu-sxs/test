@@ -1,0 +1,1 @@
+cmd_drivers/starnet/lt6911uxc/lt6911uxc.ko := aarch64-himix100-linux-ld -EL -r  -T ./scripts/module-common.lds --build-id  -o drivers/starnet/lt6911uxc/lt6911uxc.ko drivers/starnet/lt6911uxc/lt6911uxc.o drivers/starnet/lt6911uxc/lt6911uxc.mod.o ;  true

@@ -1,0 +1,1 @@
+cmd_drivers/starnet/sii9022/sii9022drv.ko := aarch64-himix100-linux-ld -EL -r  -T ./scripts/module-common.lds --build-id  -o drivers/starnet/sii9022/sii9022drv.ko drivers/starnet/sii9022/sii9022drv.o drivers/starnet/sii9022/sii9022drv.mod.o ;  true

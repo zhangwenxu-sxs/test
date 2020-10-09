@@ -1,0 +1,13 @@
+obj-m += sn_netlink/
+obj-y += sensor_hub_gpio/
+obj-y += id_detect/
+obj-m += lt6911uxc/
+obj-y += sii9022/
+obj-m += ssd1322/
+obj-m += lt8522ex/
+obj-m += oled/
+obj-m += hdmi_detect/
+obj-m += cat9883/
+obj-y += rtl8821CU/
+obj-m += fpga_monitor/
+obj-m += gpio_ctrl_hub/

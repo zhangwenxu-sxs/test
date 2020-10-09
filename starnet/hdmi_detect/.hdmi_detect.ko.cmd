@@ -1,0 +1,1 @@
+cmd_drivers/starnet/hdmi_detect/hdmi_detect.ko := aarch64-himix100-linux-ld -EL -r  -T ./scripts/module-common.lds --build-id  -o drivers/starnet/hdmi_detect/hdmi_detect.ko drivers/starnet/hdmi_detect/hdmi_detect.o drivers/starnet/hdmi_detect/hdmi_detect.mod.o ;  true

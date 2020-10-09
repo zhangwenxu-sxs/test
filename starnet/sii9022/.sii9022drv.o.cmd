@@ -1,0 +1,1 @@
+cmd_drivers/starnet/sii9022/sii9022drv.o := aarch64-himix100-linux-ld -EL    -r -o drivers/starnet/sii9022/sii9022drv.o drivers/starnet/sii9022/siHdmiTx_902x_TPI.o drivers/starnet/sii9022/hdmi_sii902xA.o 

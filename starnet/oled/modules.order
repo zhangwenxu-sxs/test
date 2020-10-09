@@ -1,0 +1,2 @@
+kernel/drivers/starnet/oled/ssd1322-spi/oled_spi.ko
+kernel/drivers/starnet/oled/ssd1322-i2c/oled_i2c.ko

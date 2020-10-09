@@ -1,0 +1,1 @@
+cmd_drivers/starnet/built-in.o :=  aarch64-himix100-linux-ld -EL    -r -o drivers/starnet/built-in.o drivers/starnet/sensor_hub_gpio/built-in.o drivers/starnet/id_detect/built-in.o drivers/starnet/sii9022/built-in.o drivers/starnet/rtl8821CU/built-in.o 

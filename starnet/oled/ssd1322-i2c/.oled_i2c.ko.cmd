@@ -1,0 +1,1 @@
+cmd_drivers/starnet/oled/ssd1322-i2c/oled_i2c.ko := aarch64-himix100-linux-ld -EL -r  -T ./scripts/module-common.lds --build-id  -o drivers/starnet/oled/ssd1322-i2c/oled_i2c.ko drivers/starnet/oled/ssd1322-i2c/oled_i2c.o drivers/starnet/oled/ssd1322-i2c/oled_i2c.mod.o ;  true

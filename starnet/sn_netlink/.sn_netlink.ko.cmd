@@ -1,0 +1,1 @@
+cmd_drivers/starnet/sn_netlink/sn_netlink.ko := aarch64-himix100-linux-ld -EL -r  -T ./scripts/module-common.lds --build-id  -o drivers/starnet/sn_netlink/sn_netlink.ko drivers/starnet/sn_netlink/sn_netlink.o drivers/starnet/sn_netlink/sn_netlink.mod.o ;  true

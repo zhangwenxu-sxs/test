@@ -1,0 +1,17 @@
+#
+# HDMI device configuration
+#
+
+menu "HDMI sii902xA support"
+
+
+config HDMI_Sii902xA
+	tristate "HDMI_Sii902xA"
+	default m
+	help
+	  If you say yes here you get support for the Sii 902xA transimitter.
+
+	  This driver can also be built as a module.  If so, the module
+	  will be called sii902xA.
+
+endmenu

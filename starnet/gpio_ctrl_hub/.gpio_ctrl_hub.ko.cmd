@@ -1,0 +1,1 @@
+cmd_drivers/starnet/gpio_ctrl_hub/gpio_ctrl_hub.ko := aarch64-himix100-linux-ld -EL -r  -T ./scripts/module-common.lds --build-id  -o drivers/starnet/gpio_ctrl_hub/gpio_ctrl_hub.ko drivers/starnet/gpio_ctrl_hub/gpio_ctrl_hub.o drivers/starnet/gpio_ctrl_hub/gpio_ctrl_hub.mod.o ;  true

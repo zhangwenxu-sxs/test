@@ -1,0 +1,1 @@
+cmd_drivers/starnet/fpga_monitor/fpga_monitor_drv.ko := aarch64-himix100-linux-ld -EL -r  -T ./scripts/module-common.lds --build-id  -o drivers/starnet/fpga_monitor/fpga_monitor_drv.ko drivers/starnet/fpga_monitor/fpga_monitor_drv.o drivers/starnet/fpga_monitor/fpga_monitor_drv.mod.o ;  true

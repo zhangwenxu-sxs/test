@@ -1,0 +1,1 @@
+cmd_drivers/starnet/lt8522ex/lt8522ex_drv.o := aarch64-himix100-linux-ld -EL    -r -o drivers/starnet/lt8522ex/lt8522ex_drv.o drivers/starnet/lt8522ex/I2C_MASTER.o drivers/starnet/lt8522ex/edid.o drivers/starnet/lt8522ex/lt8522ex.o drivers/starnet/lt8522ex/lt8522ex_main.o drivers/starnet/lt8522ex/mcu.o drivers/starnet/lt8522ex/vga.o 
