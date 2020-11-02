@@ -1,0 +1,6 @@
+ssh -p 6102 root@192.168.88.30
+
+yes
+
+nopasswd
+

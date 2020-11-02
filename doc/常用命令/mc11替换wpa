@@ -1,0 +1,26 @@
+~/busybox/sbin
+./mkfs.vfat /dev/ram0
+
+
+
+
+
+rmmod star_net_multi && sleep 5 && modprobe star_net_multi.ko file=/dev/ram0 removable=1 detect_os=0
+
+
+
+
+
+
+mount /dev/ram0 /mnt
+
+
+
+
+cp /mnt/wpa_supplicant /usr/sbin/
+
+cp /mnt/wmc /usr/bin/
+
+
+
+wpa_supplicant -Dnl80211 -i wlan0 -c wpa_supplicant.conf -d&

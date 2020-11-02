@@ -1,0 +1,34 @@
+UDP模式下
+（新增要求数据报文大小1400Bytes）
+服务端：iperf -s -u -i 1 -p 12345 -l 1400
+客户端：iperf -c 192.168.1.10 -u -p 12345 -i 1 -b 100M -t 120 -l 1400
+
+iperf -c 192.168.43.1 -u -p 12345 -i 1 -b 100M -t 120 -l 1400
+
+iperf -c 192.168.43.26 -u -p 12345 -i 1 -b 100M -t 120 -l 1400
+
+iperf -c 192.168.43.22 -u -p 12345 -i 1 -b 100M -t 120 -l 1400
+
+iperf -c 192.168.201.26 -u -p 12345 -i 1 -b 1000M -t 120 -l 1400
+
+
+
+iperf -s -u -p 1234 -i 1
+
+iperf -c 192.168.201.248 -p 1234 -i 1 -t 10 -b 1000M -u
+iperf -c 192.168.201.26 -p 1234 -i 1 -t 10 -b 1000M -u
+
+
+io -4 0xff77c218 0xffff9fa8
+
+io -4 0xff77c218 0xffff90b0
+io -4 0xff77c218 0xffff95b0
+io -4 0xff77c218 0xffff9ab0
+io -4 0xff77c218 0xffff9fb0
+io -4 0xff77c218 0xffffa4b0
+
+
+
+iperf -c 192.168.43.26 -u -p 12345 -i 1 -b 100M -t 120 -l 1400
+
+iperf -c 169.254.69.26 -u -p 12345 -i 1 -b 100M -t 120 -l 1400

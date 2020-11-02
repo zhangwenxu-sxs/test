@@ -1,0 +1,11 @@
+source /opt/fsl-imx-x11/4.1.15-2.0.0/environment-setup-cortexa7hf-neon-poky-linux-gnueabi
+
+
+echo $CC
+
+make
+
+udhcpd /etc/udhcpd.conf &
+
+
+ssh -p 6102 root@192.168.88.30

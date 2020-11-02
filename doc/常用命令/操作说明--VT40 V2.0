@@ -1,0 +1,87 @@
+2.4G信道：1、6、11
+开启2.4g热点(只有20mhz模式)：
+步骤１：关闭热点killall hostapd;busybox ifconfig wlan1 down
+步骤２:拷贝配置文件cp /etc/hostapd20.conf /etc/hostapd.conf
+步骤３:执行脚本wifi_ap -t rtl8821cu  -m 2.4g -c 11　可以通过修改-c后面的参数修改信道
+步骤４：如果需要跑流，手动给wlan1设置ip，命令是busybox  ifconfig wlan1 192.168.43.1 netmask 255.255.255.0
+步骤5：开启dhcp服务：udhcpd /etc/udhcpd.conf
+
+查看当前账号密码：cat /etc/hostapd.conf
+若要切换信道，关闭热点的两个命令多操作几次，再执行切换脚本的命令；
+
+5G 20M信道：36、48、149、157、161
+开启5g热点(20Mhz)
+步骤１：关闭热点killall hostapd;busybox  ifconfig wlan1 down
+步骤２:拷贝配置文件cp /etc/hostapd20.conf /etc/hostapd.conf
+步骤３:执行脚本wifi_ap -t rtl8821cu  -m 5g -c 161可以通过修改-c后面的参数修改信道
+步骤４：如果需要跑流，手动给wlan1设置ip，命令是busybox  ifconfig wlan1 192.168.43.1 netmask 255.255.255.0
+步骤5：开启dhcp服务：udhcpd /etc/udhcpd.conf
+
+查看当前账号密码：cat /etc/hostapd.conf
+若要切换信道，关闭热点的两个命令多操作几次，再执行切换脚本的命令；
+
+5G 80M信道：40、48、153、161
+开启5g热点(80Mhz)
+步骤１：关闭热点killall hostapd;busybox  ifconfig wlan1 down
+步骤２:拷贝配置文件cp /etc/hostapd80.conf /etc/hostapd.conf
+步骤３:执行脚本wifi_ap -t rtl8821cu  -m 5g -c 161可以通过修改-c后面的参数修改信道
+查看当前账号密码：cat /etc/hostapd.conf
+若要切换信道，关闭热点的两个命令多操作几次，再执行切换脚本的命令；
+
+
+TX定频
+命令如下：
+ifconfig wlan0 up
+
+rtwpriv wlan0 mp_ctx stop
+
+rtwpriv wlan0 mp_start
+rtwpriv wlan0 mp_channel 1//设置频道
+rtwpriv wlan0 mp_bandwidth 40M=0,shortGI=0
+rtwpriv wlan0 mp_ant_tx a//选择a天线
+rtwpriv wlan0 mp_rate 108 //表示G模 54M模式(108,135,169)
+rtwpriv wlan0 mp_get_txpower//读出当前频道
+rtwpriv wlan0 mp_txpower patha=44,pathb=50//index值参考文件<定频软件速率对照标.xls>
+rtwpriv wlan0 mp_ctx background,pkt//开始发包, 可以选择发包方式
+
+例如：2.4G 20M 54M/MCS7
+ifconfig wlan0 up
+
+rtwpriv wlan0 mp_ctx stop
+
+rtwpriv wlan0 mp_start
+rtwpriv wlan0 mp_channel 11
+rtwpriv wlan0 mp_bandwidth 40M=0,shortGI=0
+rtwpriv wlan0 mp_ant_tx a
+rtwpriv wlan0 mp_rate 135
+rtwpriv wlan0 mp_get_txpower
+rtwpriv wlan0 mp_ctx background,pkt
+
+例如：5G 20M MCS7
+ifconfig wlan0 up
+
+rtwpriv wlan0 mp_ctx stop
+
+rtwpriv wlan0 mp_start
+rtwpriv wlan0 mp_channel 36
+rtwpriv wlan0 mp_bandwidth 40M=0,shortGI=0
+rtwpriv wlan0 mp_ant_tx a
+rtwpriv wlan0 mp_rate 167
+rtwpriv wlan0 mp_get_txpower
+rtwpriv wlan0 mp_ctx background,pkt
+
+
+RX的测试：(第四条命令修改通道号rtwpriv wlan0 mp_channel 1)
+命令列表如下：
+
+ifconfig wlan0 up
+rtwpriv wlan0 mp_start//开启     
+rtwpriv wlan0 mp_bandwidth 40M=0,shortGI=0//设置带宽参数
+rtwpriv wlan0 mp_channel 1//选择通道号
+rtwpriv wlan0 mp_ant_rx a//选择a天线    
+rtwpriv wlan0 mp_reset_stats //接收数据复位
+rtwpriv wlan0 mp_arx start//开始收包
+rtwpriv wlan0 mp_arx phy //查看物理层收包情况，表示模块收到的包。
+rtwpriv wlan0 mp_query  //查看系统层收包情况，表示CPU收到的包，通常看这个数值。
+rtwpriv wlan0 mp_stop //停止工具
+命令说明

@@ -1,0 +1,5 @@
+logcat -v time
+
+logcat -v time | grep -i hostapd
+
+
