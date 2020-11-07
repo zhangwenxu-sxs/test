@@ -1,0 +1,42 @@
+一.交叉编译过程
+1.编译
+zhangwenxu@zhangwenxu-OptiPlex-3070:~/work/Hi3536/01.software/board/Hi3536_SDK_V2.0.6.0/osdrv/opensource/kernel/linux-3.10.y$ make ARCH=arm CROSS_COMPILE=arm-hisiv400-linux- modules
+
+2.复制到NFS服务器并同步
+zhangwenxu@zhangwenxu-OptiPlex-3070:~/work/Hi3536/01.software/board/Hi3536_SDK_V2.0.6.0/osdrv/opensource/kernel/linux-3.10.y$ cp drivers/starnet/motor/motor.ko ~/NFSshare/
+
+sync
+
+3.开发板连接服务器
+~ # mount -t nfs -o nolock 192.168.88.26://home/zhangwenxu/NFSshare /mnt/
+mount -t nfs -o nolock 192.168.43.26://home/zhangwenxu/NFSshare /mnt/
+mount -t nfs -o nolock 192.168.1.26://home/zhangwenxu/NFSshare /mnt/
+mount -t nfs -o nolock 192.168.222.26://home/zhangwenxu/NFSshare /mnt/
+
+mount -t nfs -o nolock 192.168.201.26://home/zhangwenxu/NFSshare /mnt/
+
+cp /mnt/FW_NIC.bin /lib/firmware/
+cd /lib/firmware/
+chmod 777 FW_NIC.bin
+
+4.进入文件夹并运行
+~ # cd /mnt
+/mnt # insmod motor.ko
+/mnt # rmmod motor.ko
+
+
+观察寄存器的值
+himm 0x120f0108
+
+
+观察是不是同一个文件
+md5sum drivers/starnet/motor/motor.ko
+
+md5sum ~/NFSshare/motor.ko
+
+
+./configure --host=arm-linux CC=aarch64-linux-gnu-gcc CFLAGS=-static CXX=aarch64-linux-gnu-g++ CXXFLAGS=-static
+
+
+
+cat /sys/devices/system/cpu/cpu0/cpufreq/cpuinfo_max_freq

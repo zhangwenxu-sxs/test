@@ -1,0 +1,18 @@
+*#205#*
+adb connect 192.168.201.164:5654
+
+adb root
+
+adb connect 192.168.201.164:5654
+
+adb remount
+
+adb shell
+
+./data/misc/wifi/hostapd.conf
+
+
+*#234#*
+https://192.168.201.164:8443
+
+*#233#*
