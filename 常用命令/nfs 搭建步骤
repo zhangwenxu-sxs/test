@@ -1,0 +1,22 @@
+1、安装NFS 服务
+sudo apt-get install rpcbind nfs-kernel-server
+
+
+2、创建共享的文件夹，例如说我创建了:
+mkdir -p /home/wujing/nfsMount/testSoftware
+
+3、修改/etc/exports配置文件,将下面的话添加到该文件中
+/home/wujing/nfsMount/testSoftware *(rw,sync,no_root_squash)
+
+4、重启nfs服务
+sudo /etc/init.d/nfs-kernel-server restart
+
+
+5、挂载测试
+sudo mount -t nfs 192.168.1.226://home/wujing/nfsMount/testSoftware ./mnt
+
+成功将主机192.168.1.226的共享文件夹 挂载到mnt目录，至此，对mnt目录的操作就相当于对
+nfs服务器上的/home/wujing/nfsMount/testSoftware 的操作。
+
+6、开发板挂载主机测试（开发板要和主机同一网段）:
+sudo mount -t nfs -o nolock 192.168.1.226://home/wujing/nfsMount/testSoftware ./mnt
